@@ -1,0 +1,41 @@
+<!-- <p-carousel [value]="products" styleClass="custom-carousel" [numVisible]="3"
+ [numScroll]="1" [circular]="true" [autoplayInterval]="3000">
+  <ng-template pTemplate="header">
+      <h5>Learn Volleyball through pictures</h5>
+  </ng-template>
+  <ng-template let-product pTemplate="item">
+      <div class="product-item">
+          <div class="product-item-content">
+              <div class="p-mb-3">
+              </div>
+              <div>
+                  <img [src]="product.imageSrc">
+                  <h4 class="p-mt-0 p-mb-3">{{product.content}}</h4>
+                  <div class="car-buttons p-mt-5">
+                    <p-button type="button" styleClass="p-button p-button-rounded p-mr-2" icon="pi pi-search"></p-button>
+                    <p-button type="button" styleClass="p-button-success p-button-rounded p-mr-2" icon="pi pi-star"></p-button>
+                    <p-button type="button" styleClass="p-button-help p-button-rounded" icon="pi pi-cog"></p-button>
+                </div>
+              </div>
+          </div>
+      </div>
+  </ng-template>
+</p-carousel> -->
+<p-carousel [value]="products" [numVisible]="3" [numScroll]="1" [circular]="true"
+ [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000" styleClass="custom-carousel">
+    <ng-template pTemplate="header">
+        <h5>{{"Learn Volleyball through pictures."+heading}}</h5>
+    </ng-template>
+    <ng-template let-product pTemplate="item">
+        <div class="product-item">
+            <div class="product-item-content">
+                <div class="p-mb-3">
+                </div>
+                <div>
+                    <h4 class="p-mb-1">{{product.title}}</h4>
+                    <img [src]="product.source">
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</p-carousel>

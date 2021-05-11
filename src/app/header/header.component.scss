@@ -1,0 +1,36 @@
+.navbar{
+    background-color: #009EDB;
+}
+.logo{
+    border-radius: 25px;
+    width: 50px;
+    height: 50px
+}
+.logo>img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.headerText{
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 28px;
+    line-height: 32px;
+    margin-left: 20px;
+}
+#bigScreen {
+    display: block;
+}
+.megamenu {
+    background-color: #009EDB;
+}
+
+ .loginbtn,.user{
+    margin-left: auto;
+    margin-right: 30px;
+ }
+ .user{
+    color: whitesmoke;
+    padding: 4px;
+    font-size: 20px;
+ }
+

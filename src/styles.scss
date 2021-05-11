@@ -1,0 +1,150 @@
+/* You can add global styles to this file, and also import other style files */
+.p-dialog-header {
+    display: none;
+}
+.p-dialog .p-dialog-header-icon {
+    display: none !important;
+}
+.p-dialog-footer{
+    background-color:steelblue !important;
+}
+.p-component-overlay{
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+.p-dialog-content{
+    background-color: whitesmoke;
+}
+.btn-primary:disabled, .btn-primary.disabled {
+    color: #fff !important;
+    background-color: gray !important;
+    opacity: 0.5 !important;
+    cursor: not-allowed !important;
+}
+body {
+    overflow-y: auto;
+    background-color: #e8e8e8;
+  
+    overflow-x: hidden;
+    * {
+      font-family: "ATTAleckSans_W_Rg";
+    }
+    max-width: 100%; // fit the screen
+    overflow-x: hidden; // remove horizontal scroll
+  }
+.p-menuitem-text {
+    line-height: 1;
+    width: 75px;
+    color: whitesmoke;
+    padding: 4px;
+    font-size: 20px;
+}
+.p-menuitem-text:active{
+    color: black;
+}
+.p-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -.5rem;
+    margin-left: -.5rem;
+    margin-top: -.5rem;
+}
+.p-grid>.p-col, .p-grid>[class*=p-col] {
+    box-sizing: border-box;
+}
+.p-col-3 {
+    width: 25%;
+    flex: 0 0 auto;
+    padding: .5rem;
+}
+.p-galleria-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #f8f9fa;
+}
+.p-galleria-close {
+    margin: 0.5rem;
+    background: transparent;
+    color: #f8f9fa;
+    width: 4rem;
+    height: 4rem;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    border-radius: 50%;
+}
+.p-galleria-close {
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+}
+.p-galleria-close, .p-galleria-mask {
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.p-ripple {
+    overflow: hidden;
+    position: relative;
+}
+.p-link {
+    text-align: left;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.p-component, .p-component * {
+    box-sizing: border-box;
+}
+.p-galleria .p-galleria-close .p-galleria-close-icon {
+    font-size: 2rem;
+}
+.p-galleria-close-icon {
+    display: block;
+    position: absolute;
+    border-radius: 100%;
+}
+.pi {
+    font-family: primeicons;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+}
+.p-galleria .p-galleria-item-nav:not(.p-disabled):hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #f8f9fa;
+}
+.p-galleria-mask .p-galleria-item-nav {
+    position: fixed;
+    top: 50%;
+    margin-top: -.5rem;
+}
+.p-galleria .p-galleria-item-nav {
+    background: transparent;
+    color: #f8f9fa;
+    width: 4rem;
+    height: 4rem;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    border-radius: 3px;
+    margin: 0 0.5rem;
+}
+.p-galleria-item-next {
+    right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.p-galleria-item-nav {
+    position: absolute;
+    top: 50%;
+    margin-top: -.5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}

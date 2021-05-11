@@ -1,0 +1,57 @@
+<!-- <ng-container *ngFor="let card of cards">
+    <div class="flex-container">
+            <p-card>
+                <img [src]=card.imageSrc alt="">
+                <ng-template pTemplate="footer">
+                    {{card.content}}
+                </ng-template>
+            </p-card>
+    </div>
+</ng-container> -->
+<!-- <div class="row"> 
+    <div class="column">
+        <ng-container *ngFor="let card of col1">
+            <img [src]="card.imageSrc" style="width:100%">             
+            <div class="content">{{card.content}}</div>
+        </ng-container>        
+    </div>
+    <div class="column">
+        <ng-container *ngFor="let card of col2">
+            <img [src]="card.imageSrc" style="width:100%">
+            <div class="content">{{card.content}}</div>
+        </ng-container>        
+    </div>
+    <div class="column">
+        <ng-container *ngFor="let card of col3">
+            <img [src]="card.imageSrc" style="width:100%">
+            <div class="content">{{card.content}}</div>
+        </ng-container>        
+    </div>
+    <div class="column">
+        <ng-container *ngFor="let card of col4">
+            <img [src]="card.imageSrc" style="width:100%">
+            <div class="content">{{card.content}}</div>
+        </ng-container>        
+    </div>
+    
+</div> -->
+  
+<p-galleria [(value)]="images" [(visible)]="displayCustom" [(activeIndex)]="activeIndex" [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '850px'}" [numVisible]="7"
+    [circular]="true" [fullScreen]="true" [showItemNavigators]="true" [showThumbnails]="false" [baseZIndex]="100000"> 
+    <ng-template pTemplate="item" let-item>
+        <img [src]="item.source" style="width: 100%; display: block;"/>
+    </ng-template>
+    <ng-template pTemplate="thumbnail" let-item>
+        <div class="p-grid p-nogutter p-justify-center">
+            <img [src]="item.source" style="display: block;"/>
+        </div>
+    </ng-template>
+</p-galleria>
+<div *ngIf="images" class="p-grid">
+    <div *ngFor="let image of images; let index = index;" class=" p-col-3" key="index">
+        <img [src]="image.source" class="img-thumbnail rounded"alt="not found" style="cursor: pointer" 
+        (click)="imageClick(index)"/>
+        <div class="content">{{image.title}}</div>
+    </div>
+</div>
+

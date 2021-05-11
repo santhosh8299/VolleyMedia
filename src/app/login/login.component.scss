@@ -1,0 +1,33 @@
+.login-form {
+    width: 340px;
+    margin: 50px auto;
+  	font-size: 15px;
+}
+.login-form form {
+    margin-bottom: 15px;
+    padding: 30px;
+}
+.login-form h2 {
+    margin: 0 0 15px;
+}
+.form-control, .btn {
+    min-height: 38px;
+    border-radius: 2px;
+}
+.btn {        
+    font-size: 15px;
+    font-weight: bold;
+}
+.p-dialog-header {
+    background-color:steelblue !important;
+    color: #fff !important;
+}
+.p-dialog-footer{
+    background-color:steelblue !important;
+}
+.p-dialog-mask{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.cancelbtn{
+    margin-left: 20px;
+}

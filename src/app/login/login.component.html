@@ -1,0 +1,35 @@
+<p-dialog [(visible)]="show" [modal]="true" 
+    [style]="{width: '50vw'}" [baseZIndex]="10000"
+    [draggable]="false" [resizable]="false">
+    <div class="login-form mt-4 pt-4">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="form-group m-2">
+                <input type="text" class="form-control" placeholder="User Id"
+                 formControlName="userid">
+                <small *ngIf="userid.hasError('required') && userid.touched"  class="text-danger d-block">
+                 {{validationMessages.userid.required}}</small>
+                 <small *ngIf="userid.hasError('invalid') && userid.touched"  class="text-danger d-block">
+                {{validationMessages.userid.invalid}}</small>
+
+            </div>
+            <div class="form-group m-2">
+                <input type="password" class="form-control" placeholder="Password"
+                 formControlName="password">
+                 <small *ngIf="password.hasError('required') && password.touched"  class="text-danger d-block">
+                 {{validationMessages.password.required}}</small>
+                 <small *ngIf="password.hasError('invalid') && password.touched"  class="text-danger d-block">
+                {{validationMessages.password.invalid}}</small>
+            </div>
+            <div>
+                <button class="btn btn-primary " [disabled]="!loginForm.valid" 
+        type="submit">Log In</button>
+                <button class="btn btn-primary cancelbtn"  
+        type="button" (click)="cancel()">Cancel</button>
+            </div>
+        </form>
+    </div>
+        <!-- <ng-template pTemplate="footer">
+        <button class="btn btn-primary my-2 my-sm-0" (click)="onSubmit()" [disabled]="!loginForm.valid" 
+        type="button">Log In</button>
+        </ng-template> -->
+</p-dialog> 
